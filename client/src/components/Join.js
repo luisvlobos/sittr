@@ -32,8 +32,7 @@ export default class Join extends React.Component {
         this.setState({password: e.target.value});
     }
 
-    port = process.env.PORT || "http://localhost:5000/users/add"
-
+    
     handleLogin(e) {
         e.preventDefault();
 
@@ -44,7 +43,7 @@ export default class Join extends React.Component {
         }
         console.log(user);
 
-        axios.post(port, user)
+        axios.post('http://sittrapp.herokuapp.com/', user)
             .then(res => console.log(res.data));
 
         if(this.state.value === 'babysitter'){
