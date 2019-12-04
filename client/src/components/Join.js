@@ -47,9 +47,9 @@ export default class Join extends React.Component {
             .then(res => console.log(res.data));
 
         if(this.state.value === 'babysitter'){
-            window.location = '/caretakers';
-        }else {
             window.location = '/parents';
+        }else {
+            window.location = '/caretakers';
         }
     }
 
